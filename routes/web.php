@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Job;
 
 Route::get('/', function () {
+
     return view('home', [
         'greeting' => 'Hello'
     ]);
@@ -11,7 +12,7 @@ Route::get('/', function () {
 
 Route::get('/jobs', function () {
     return view('jobs', [
-        'jobs' => Job::allJobs(),
+        'jobs' => Job::all(),
     ]);
 });
 
